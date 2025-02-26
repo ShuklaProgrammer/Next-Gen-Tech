@@ -1,8 +1,7 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
 interface CounterProps {
-  target: number;
+  target: number; // Target value can be an integer or decimal
 }
 
 const Counter: React.FC<CounterProps> = ({ target }) => {
@@ -14,27 +13,25 @@ const Counter: React.FC<CounterProps> = ({ target }) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            animateCount();
-            observer.unobserve(entry.target);
+            animateCount(); // Start counting animation when in view
+            observer.unobserve(entry.target); // Stop observing after animation starts
           }
         });
       },
-      { threshold: 0.5 },
+      { threshold: 0.5 } // Trigger when 50% of the component is in view
     );
 
-    const currentCounter = counterRef.current;
-
-    if (currentCounter) {
-      observer.observe(currentCounter);
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
     }
 
     return () => {
-      if (currentCounter) observer.unobserve(currentCounter);
+      if (counterRef.current) observer.unobserve(counterRef.current);
     };
-  });
+  }, []);
 
   const animateCount = () => {
-    const increment = target / 100;
+    const increment = target / 100; // Adjust for speed
     let currentCount = 0;
 
     const updateCount = () => {
@@ -50,8 +47,8 @@ const Counter: React.FC<CounterProps> = ({ target }) => {
     updateCount();
   };
 
-  const decimalPlaces =
-    target % 1 !== 0 ? target.toString().split(".")[1].length : 0;
+  // Determine the number of decimal places in the target dynamically
+  const decimalPlaces = target % 1 !== 0 ? target.toString().split(".")[1].length : 0;
 
   return (
     <div ref={counterRef} className="counter">
