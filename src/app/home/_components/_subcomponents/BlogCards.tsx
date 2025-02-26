@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 
 import LinkButton from "@/components/LinkButton";
 
 import { FaHeart, FaRegComment } from "react-icons/fa";
 import { GrSend } from "react-icons/gr";
+
+import { motion } from "motion/react";
 
 interface BlogCardProps {
   authorImage: string;
@@ -32,7 +35,13 @@ export default function BlogCards({
 }: BlogCardProps) {
   return (
     <div className="flex items-center justify-between w-[85%] mx-auto py-20">
-      <div className="flex items-center gap-2">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ x: [-50, 0], opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        viewport={{ amount: 0.8, margin: "0px 0px -20px 0px" }}
+        className="flex items-center gap-2"
+      >
         <div className="w-14 h-14 rounded-full overflow-hidden">
           <Image src={authorImage} width={100} height={100} alt="profile" />
         </div>
@@ -42,9 +51,14 @@ export default function BlogCards({
           </h4>
           <p className="text-white/50">{authorRole}</p>
         </div>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ y: [50, 0], opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        viewport={{ amount: 0.8, margin: "0px 0px -20px 0px" }}
+      >
         <span className="text-white/50 text-lg">{date}</span>
         <h2 className="text-white text-xl font-semibold mt-4">{title}</h2>
         <p className="text-white/50 mb-4">{description}</p>
@@ -62,9 +76,16 @@ export default function BlogCards({
             {shares}
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      <LinkButton>{button}</LinkButton>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ x: [50, 0], opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        viewport={{ amount: 0.8, margin: "0px 0px -20px 0px" }}
+      >
+        <LinkButton>{button}</LinkButton>
+      </motion.div>
     </div>
   );
 }

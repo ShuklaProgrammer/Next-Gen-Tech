@@ -34,7 +34,7 @@ export default function HomeHeroSection() {
               transition={{ type: "spring", stiffness: 160, damping: 18 }}
               className="font-semibold text-5xl"
             >
-              <span className="text-white">Explore the Frontiers of</span>{" "}
+              <span className="text-white">Explore the Frontiers of</span>
               <span className="bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
                 Artificial Intelligence
               </span>

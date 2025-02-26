@@ -11,7 +11,7 @@ export default function ReadersSection() {
         <FaStar
           className={`text-xl hover:cursor-pointer text-orange-400`}
           key={i}
-        />,
+        />
       );
     }
     return stars;
