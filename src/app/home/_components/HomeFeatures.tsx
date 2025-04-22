@@ -54,15 +54,15 @@ export default function HomeFeatures() {
   return (
     <>
       <PageTileBar subTitle="Unlock the Power of" title="FutureTech Features" />
-      <div className="w-[85%] mx-auto flex items-center justify-between py-10 border-b border-white/20">
-        <div className="space-y-2 w-[30%]">
+      <div className="w-[85%] mx-auto md:flex items-center justify-between py-10 border-b border-white/20">
+        <div className="space-y-2 lg:w-[30%] md-w-[40%]">
           <FaMicroblog className="text-rose-600 text-5xl" />
           <motion.h1
             initial={{ opacity: 0 }}
             whileInView={{ x: [50, 0], opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             viewport={{ amount: 0.8, margin: "0px 0px -20px 0px" }}
-            className="text-4xl text-white"
+            className="md:text-4xl text-2xl text-white"
           >
             Future Technology Blog
           </motion.h1>
@@ -77,20 +77,20 @@ export default function HomeFeatures() {
           </motion.p>
         </div>
 
-        <div className="gap-4 w-[55%]">
+        <div className="gap-4 lg:w-[55%]">
           <HoverEffect items={projects} />
         </div>
       </div>
 
-      <div className="w-[85%] mx-auto flex items-center justify-between py-10">
-        <div className="space-y-2 w-[30%]">
+      <div className="w-[85%] mx-auto md:flex items-center justify-between py-10">
+        <div className="space-y-2 lg:w-[30%] md-w-[40%]">
           <FaSearch className="text-rose-600 text-5xl" />
           <motion.h1
             initial={{ opacity: 0 }}
             whileInView={{ x: [50, 0], opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             viewport={{ amount: 0.8, margin: "0px 0px -20px 0px" }}
-            className="text-4xl text-white"
+            className="md:text-4xl text-2xl text-white"
           >
             Research Insights Blog
           </motion.h1>
@@ -105,7 +105,7 @@ export default function HomeFeatures() {
           </motion.p>
         </div>
 
-        <div className="gap-4 w-[55%]">
+        <div className="gap-4 lg:w-[55%]">
           <HoverEffect items={blogs} />
         </div>
       </div>

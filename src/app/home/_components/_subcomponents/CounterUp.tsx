@@ -27,13 +27,13 @@ export default function CounterUp() {
       {targets.map((counter, index) => (
         <div
           key={index}
-          className={`space-y-2 p-10 ${index !== targets.length - 1 ? "border-r border-white/20" : ""}`}
+          className={`space-y-2 md:p-10 p-4 ${index !== targets.length - 1 ? "border-r border-white/20" : ""}`}
         >
-          <span className="text-5xl text-white font-semibold flex items-center">
+          <span className="lg:text-5xl md:text-4xl text-3xl text-white font-semibold flex items-center">
             <Counter target={counter.target} />
             <FaPlus className="text-3xl text-rose-600" />
           </span>
-          <p className="text-white/60">{counter.title}</p>
+          <p className="text-white/60 md:text-base text-sm">{counter.title}</p>
         </div>
       ))}
     </div>

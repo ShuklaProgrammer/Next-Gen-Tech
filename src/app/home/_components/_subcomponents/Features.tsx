@@ -33,11 +33,11 @@ const features: Feature[] = [
 
 export default function Features() {
   return (
-    <div className="flex border border-white/20 px-10 w-[85%] mx-auto my-4">
+    <div className="md:flex border border-white/20 lg:px-10 w-[85%] mx-auto my-4">
       {features.map((feature, index) => (
         <div
           key={index}
-          className={`space-y-4 w-full p-14 ${index !== features.length - 1 ? "border-r border-white/20" : ""}`}
+          className={`space-y-4 w-full lg:p-14 p-10 ${index !== features.length - 1 ? "md:border-r border-b border-white/20" : ""}`}
         >
           {feature.icon}
 

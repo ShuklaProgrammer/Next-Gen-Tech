@@ -38,11 +38,11 @@ export default function ResourceCard({ resources, people }: ResourceProps) {
       {resources.map((resource, index) => (
         <div
           key={index}
-          className={`flex justify-between items-center w-[85%] mx-auto py-10 ${
+          className={`lg:flex lg:px-0 px-5 justify-between items-center md:w-[85%] mx-auto py-10 ${
             resources.length - 1 !== index && "border-b border-white/30"
           }`}
         >
-          <div className="w-[33%] flex flex-col space-y-6">
+          <div className="lg:w-[33%] flex flex-col space-y-6">
             <GiWhiteBook className="text-rose-600 text-5xl" />
             <h2 className="text-white font-semibold text-4xl">
               {resource.name}
@@ -62,7 +62,7 @@ export default function ResourceCard({ resources, people }: ResourceProps) {
             </div>
           </div>
 
-          <div className="w-[55%] space-y-6">
+          <div className="lg:w-[55%] space-y-6">
             <div className="flex items-center justify-between">
               <h2 className="text-white font-semibold text-xl">
                 {resource.imageTitle}

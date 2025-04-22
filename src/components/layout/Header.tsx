@@ -4,33 +4,33 @@ import { HoverBorderGradient } from "../ui/hover-border-gradient";
 const Header = () => {
   return (
     <header className="py-5 border-b border-solid border-white border-opacity-35 bg-neutral-900">
-      <nav className="flex justify-between items-center w-[85%] mx-auto">
-        <h1 className="text-3xl font-bold text-white animate-pulse pointer-events-none">
+      <nav className="flex justify-between items-center lg:w-[85%] w-[90%] mx-auto">
+        <h1 className="lg:text-3xl md:text-2xl text-lg font-bold text-white animate-pulse pointer-events-none">
           NextGenTech
         </h1>
-        <ul className="flex items-center font-semibold text-white gap-10">
+        <ul className="flex items-center font-semibold text-white lg:gap-10 md:gap-6 gap-4">
           <li>
-            <HoverBorderGradient as="button">
+            <HoverBorderGradient as="button" className="lg:text-base md:text-sm text-xs md:py-2 md:px-4 px-2 py-1">
               <span>Home</span>
             </HoverBorderGradient>
           </li>
           <li>
-            <HoverBorderGradient as="button">
+            <HoverBorderGradient as="button" className="lg:text-base md:text-sm text-xs md:py-2 md:px-4 px-2 py-1">
               <span>News</span>
             </HoverBorderGradient>
           </li>
           <li>
-            <HoverBorderGradient as="button">
+            <HoverBorderGradient as="button" className="lg:text-base md:text-sm text-xs md:py-2 md:px-4 px-2 py-1">
               <span>Podcasts</span>
             </HoverBorderGradient>
           </li>
           <li>
-            <HoverBorderGradient as="button">
+            <HoverBorderGradient as="button" className="lg:text-base md:text-sm text-xs md:py-2 md:px-4 px-2 py-1">
               <span>Resources</span>
             </HoverBorderGradient>
           </li>
         </ul>
-        <button className="bg-rose-600 text-white font-semibold px-4 py-2 rounded-lg">
+        <button className="bg-rose-600 text-white font-semibold px-4 py-2 rounded-lg lg:flex hidden">
           Contact Us
         </button>
       </nav>

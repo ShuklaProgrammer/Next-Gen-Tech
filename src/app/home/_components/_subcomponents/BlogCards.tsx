@@ -34,7 +34,7 @@ export default function BlogCards({
   button,
 }: BlogCardProps) {
   return (
-    <div className="flex items-center justify-between w-[85%] mx-auto py-20">
+    <div className="lg:flex items-center justify-between w-[85%] mx-auto py-20">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ x: [-50, 0], opacity: 1 }}
@@ -83,6 +83,7 @@ export default function BlogCards({
         whileInView={{ x: [50, 0], opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ amount: 0.8, margin: "0px 0px -20px 0px" }}
+        className="mt-4 lg:mt-0"
       >
         <LinkButton>{button}</LinkButton>
       </motion.div>

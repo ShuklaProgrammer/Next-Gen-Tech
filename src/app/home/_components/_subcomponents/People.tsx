@@ -59,7 +59,7 @@ export default function People() {
       <div className="flex items-center mb-8">
         <AnimatedTooltip items={people} />
       </div>
-      <h3 className="text-white text-xl">Explore 1000+ resources</h3>
+      <h3 className="text-white md:text-xl text-lg">Explore 1000+ resources</h3>
       <p className="text-white text-opacity-50 my-2">
         Over 1,000 articles on emerging tech trends and breakthroughs.
       </p>
