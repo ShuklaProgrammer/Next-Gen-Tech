@@ -41,7 +41,7 @@ export default function HomeHeroSection() {
             </motion.div>
             <TextGenerateEffect
               words={words}
-              className="text-white pb-10"
+              className="text-white md:pb-10"
             />
 
             <CounterUp />

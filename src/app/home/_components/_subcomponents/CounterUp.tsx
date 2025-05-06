@@ -23,7 +23,7 @@ const targets: Target[] = [
 
 export default function CounterUp() {
   return (
-    <div className="flex border border-white/20 justify-around">
+    <div className="flex border border-white/20 md:justify-around">
       {targets.map((counter, index) => (
         <div
           key={index}
