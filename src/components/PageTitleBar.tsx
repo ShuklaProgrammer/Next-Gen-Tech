@@ -16,7 +16,7 @@ export default function PageTileBar({
   button,
 }: PageTitleProps) {
   return (
-    <div className="bg-neutral-900 py-20 md:flex items-center justify-between lg:px-28 md:px-10 px-5">
+    <div className="bg-neutral-900 lg:py-20 md:py-10 py-6 md:flex items-center justify-between lg:px-28 md:px-10 px-5">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [50, 0], opacity: 1 }}

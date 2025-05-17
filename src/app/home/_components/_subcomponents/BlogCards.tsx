@@ -34,7 +34,7 @@ export default function BlogCards({
   button,
 }: BlogCardProps) {
   return (
-    <div className="lg:flex items-center justify-between w-[85%] mx-auto py-20">
+    <div className="lg:flex items-center justify-between w-[85%] mx-auto md:py-10 py-6 lg:py-20">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ x: [-50, 0], opacity: 1 }}

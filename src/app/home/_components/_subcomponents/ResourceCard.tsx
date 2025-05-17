@@ -49,7 +49,7 @@ export default function ResourceCard({ resources, people }: ResourceProps) {
             </h2>
             <p className="text-white/50">{resource.detail}</p>
             <LinkButton>{resource.button}</LinkButton>
-            <div className="flex justify-between gap-10 bg-neutral-900 border border-white/20 rounded-md p-5">
+            <div className="sm:flex justify-between gap-10 bg-neutral-900 border border-white/20 rounded-md p-5">
               <div>
                 <span className="text-white/50">Downloaded By</span>
                 <h3 className="text-white text-xl font-semibold">
@@ -63,11 +63,11 @@ export default function ResourceCard({ resources, people }: ResourceProps) {
           </div>
 
           <div className="lg:w-[55%] space-y-6">
-            <div className="flex items-center justify-between">
+            <div className="sm:flex items-center justify-between mt-2 sm:mt-0">
               <h2 className="text-white font-semibold text-xl">
                 {resource.imageTitle}
               </h2>
-              <p className="text-white/50 w-[70%]">{resource.imageDetail}</p>
+              <p className="text-white/50 sm:w-[70%]">{resource.imageDetail}</p>
             </div>
             <div className="w-full h-72 overflow-hidden bg-red-600 rounded-xl hover:shadow-[0_0_50px_pink] duration-500">
               <Image
@@ -79,15 +79,15 @@ export default function ResourceCard({ resources, people }: ResourceProps) {
               />
             </div>
 
-            <div className="flex items-center justify-between w-full gap-4">
-              <div className="bg-neutral-900 border border-white/20 p-4 w-[35%] rounded-md">
+            <div className="sm:flex items-center justify-between w-full gap-4">
+              <div className="bg-neutral-900 border border-white/20 p-4 sm:w-[35%] rounded-md mb-4 sm:mb-0">
                 <span className="text-white/50">{resource.totalName}</span>
                 <h2 className="text-white font-semibold text-lg">
                   {resource.totalDownloads}
                 </h2>
               </div>
 
-              <div className="bg-neutral-900 border border-white/20 p-4 flex items-center justify-between w-[80%] rounded-md">
+              <div className="bg-neutral-900 border border-white/20 p-4 flex items-center justify-between sm:w-[80%] rounded-md">
                 <div>
                   <span className="text-white/50">Download Formats</span>
                   <h1 className="text-white font-semibold text-lg">
